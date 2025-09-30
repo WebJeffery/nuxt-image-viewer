@@ -1,0 +1,53 @@
+{
+  "name": "@nuxtjs/viewer",
+  "version": "1.0.0",
+  "description": "A Nuxt module for ViewerJS - A JavaScript image viewer",
+  "main": "dist/module.js",
+  "types": "dist/module.d.ts",
+  "files": [
+    "dist",
+    "runtime",
+    "types"
+  ],
+  "scripts": {
+    "build": "node scripts/build.js",
+    "build:module": "nuxt-module-build --stub --no-declaration",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "prepublishOnly": "npm run build",
+    "release": "npm run build && npm publish",
+    "typecheck": "nuxt typecheck",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "nuxt",
+    "nuxt-module",
+    "viewerjs",
+    "image-viewer",
+    "gallery",
+    "lightbox"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "viewerjs": "^1.11.6"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxt/eslint": "latest",
+    "@nuxt/module-builder": "latest",
+    "@nuxt/test-utils": "latest",
+    "@nuxt/typescript-build": "latest",
+    "@types/node": "^20",
+    "nuxt": "^3.8.0",
+    "typescript": "^5",
+    "vue-tsc": "^3.1.0"
+  },
+  "peerDependencies": {
+    "nuxt": "^3.0.0 || ^4.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
