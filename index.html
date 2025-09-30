@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片画廊演示 - 开发友好界面</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧操作面板 -->
+        <div class="left-panel">
+            <h2>选项</h2>
+            <div class="options-list">
+                <label class="option-item">
+                    <input type="checkbox" id="button" checked>
+                    <span class="checkmark"></span>
+                    button
+                </label>
+                <label class="option-item">
+                    <input type="checkbox" id="navbar" checked>
+                    <span class="checkmark"></span>
+                    navbar
+                </label>
+                <label class="option-item">
+                    <input type="checkbox" id="title" checked>
+                    <span class="checkmark"></span>
+                    title
+                </label>
+                <label class="option-item">
+                    <input type="checkbox" id="toolbar" checked>
+                    <span class="checkmark"></span>
+                    toolbar
+                </label>
+                <label class="option-item">
+                    <input type="checkbox" id="tooltip" checked>
+                    <span class="checkmark"></span>
+                    tooltip
+                </label>
+                <label class="option-item">
+                    <input type="checkbox" id="movable" checked>
+                    <span class="checkmark"></span>
+                    movable
+                </label>
+                <label class="option-item">
+                    <input type="checkbox" id="zoomable" checked>
+                    <span class="checkmark"></span>
+                    zoomable
+                </label>
+                <label class="option-item">
+                    <input type="checkbox" id="rotatable" checked>
+                    <span class="checkmark"></span>
+                    rotatable
+                </label>
+                <label class="option-item">
+                    <input type="checkbox" id="scalable" checked>
+                    <span class="checkmark"></span>
+                    scalable
+                </label>
+                <label class="option-item">
+                    <input type="checkbox" id="transition" checked>
+                    <span class="checkmark"></span>
+                    transition
+                </label>
+                <label class="option-item">
+                    <input type="checkbox" id="fullscreen" checked>
+                    <span class="checkmark"></span>
+                    fullscreen
+                </label>
+                <label class="option-item">
+                    <input type="checkbox" id="keyboard" checked>
+                    <span class="checkmark"></span>
+                    keyboard
+                </label>
+            </div>
+        </div>
+
+        <!-- 右侧图片画廊演示区域 -->
+        <div class="main-content">
+            <div class="image-gallery">
+                <!-- 主图片显示区域 -->
+                <div class="main-image-container">
+                    <img id="mainImage" src="https://picsum.photos/800/500?random=1" alt="主图片" class="main-image">
+                    <div class="image-info">Image: 1 (800 x 500)</div>
+                </div>
+
+                <!-- 控制工具栏 -->
+                <div class="toolbar">
+                    <button class="tool-btn" id="zoomOut" title="缩小">-</button>
+                    <button class="tool-btn" id="zoomIn" title="放大">+</button>
+                    <button class="tool-btn" id="actualSize" title="实际大小">1:1</button>
+                    <button class="tool-btn" id="rotate" title="旋转">C</button>
+                    <button class="tool-btn" id="prevImage" title="上一张">&lt;</button>
+                    <button class="tool-btn" id="playPause" title="播放/暂停">►</button>
+                    <button class="tool-btn" id="nextImage" title="下一张">&gt;</button>
+                    <button class="tool-btn" id="undo" title="撤销">↶</button>
+                    <button class="tool-btn" id="redo" title="重做">↷</button>
+                    <button class="tool-btn" id="info" title="信息">i</button>
+                    <button class="tool-btn" id="fullscreen" title="全屏">⛶</button>
+                </div>
+
+                <!-- 缩略图条 -->
+                <div class="thumbnails">
+                    <div class="thumbnail active" data-index="0">
+                        <img src="https://picsum.photos/100/60?random=1" alt="缩略图1">
+                    </div>
+                    <div class="thumbnail" data-index="1">
+                        <img src="https://picsum.photos/100/60?random=2" alt="缩略图2">
+                    </div>
+                    <div class="thumbnail" data-index="2">
+                        <img src="https://picsum.photos/100/60?random=3" alt="缩略图3">
+                    </div>
+                    <div class="thumbnail" data-index="3">
+                        <img src="https://picsum.photos/100/60?random=4" alt="缩略图4">
+                    </div>
+                    <div class="thumbnail" data-index="4">
+                        <img src="https://picsum.photos/100/60?random=5" alt="缩略图5">
+                    </div>
+                    <div class="thumbnail" data-index="5">
+                        <img src="https://picsum.photos/100/60?random=6" alt="缩略图6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部配置输出区域 -->
+    <div class="bottom-section">
+        <div class="config-output">
+            <div class="options-json">
+                <span class="label">Options:</span>
+                <span id="optionsJson">{ "inline": true, "button": true, "navbar": true, "title": true, "toolbar": true, "tooltip": true, "movable": true, "zoomable": true, "rotatable": true, "scalable": true, "transition": true, "fullscreen": true, "keyboard": true, "url": "data-source" }</span>
+            </div>
+        </div>
+
+        <div class="api-section">
+            <h3>Api</h3>
+            <a href="#" class="source-link">Source</a>
+            <p>点击显示画廊，无需自己渲染图片。仅在模态模式下可用。</p>
+            <button class="url-array-btn">URL Array</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
